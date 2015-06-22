@@ -1,0 +1,106 @@
+/*header*/
+.header{position: relative;top:0;left:0;width: 100%;margin:0 auto;height: 80px;}
+.header .con{width: 960px;margin: 0 auto;}
+.header h1{width: 193px;height: 35px;margin-top: 22px;float: left;}
+.header h1 i{display: inline-block;float: left;width: 54px;height: 100%;background: url('../img/wy-header.png') no-repeat 0 0;}
+.header h1 span{display: inline-block;float: left;width: 122px;height: 100%;font-size: 0;line-height: 0;background: url('../img/wy-header.png') no-repeat -54px 0;margin-left: 14px;}
+.header .intro{margin-top: 22px;width: 150px;height: 35px;float: left;margin-left: 18px;font-size: 0;line-height: 0;background: url('../img/wy-header.png') no-repeat -176px 0;}
+
+.header .nav{float: right;width: 500px;right: 0;}
+.header .nav li{float: left;display: inline-block;line-height: 80px;padding-left:20px;padding-right:20px;height: 80px;}
+.header .nav li a{font-size: 16px;color: #8d8d8d;}
+.header .nav li a:hover{color: #000;}
+.header .nav li.on{border-bottom: 4px solid #3091f2;height: 76px;}
+.header .nav li.on a{color: #000;font-weight: bold;}
+.header .nav li.toMain{width: 110px;padding:0;text-align: center;background: #3091f2;text-align: center;height: 40px;line-height: 40px;border-radius: 5px;margin-top: 20px;margin-left: 35px;}
+.header .nav li.toMain a{color: #fff;font-size: 14px;}
+.header .nav li.toMain a:after{content:'';display: inline-block;border-width:5px;border-style: solid;border-color: transparent transparent transparent #fff;margin-left: 10px;}
+.header .line{width: 95%;height: 1px;line-height: 0;font-size: 0;background: #e6e6e6;margin: 0 auto;}
+
+
+.content{width: 100%;padding-bottom: 134px;}
+
+/*banner*/
+.banner{width: 100%;text-align: center;min-width: 960px;height: 518px;background: #3091f2;overflow: hidden;position: relative;}
+.banner ul{width: 300%;height: 518px;position: absolute;left: 0;top: 0;}
+.banner li{width: 33.333%;float: left;}
+
+.banner .tab{width: 100%;text-align: center;position: absolute;bottom: 10px;height: 10px;left:0;line-height: 10px;}
+.banner .tab a{display: inline-block;width: 10px;height: 10px;line-height: 0;font-size: 0;background: #56aafd;border-radius: 50%;margin: 0 5px;}
+.banner .tab a.on{background: #fff;}
+
+/*downApp*/
+.downApp{width: 530px;margin: 0 auto 80px;margin-top: 88px;}
+.downApp li{display: inline-block;float: left;margin-right: 100px;}
+.downApp li.last{margin-right: 0;}
+.downApp li:last-child{margin-right: 0;}
+.downApp li i{background: url(../img/appDown.png) no-repeat;display: block;width: 66px;height: 66px;margin:auto auto;}
+.downApp li a{font-size: 18px;color: #adadae;line-height: 60px;}
+.downApp i.android{background-position: -71px -107px;}
+.downApp i.iphone{background-position:-107px 0;}
+.downApp i.ma{background-position: 0 -107px;}
+
+
+/*footer*/
+.footer{background: #e6e6e6;position: absolute;bottom: 0;left: 0;width: 100%;padding:40px 0;}
+.footer .con{width: 648px;margin: 0 auto;}
+.footer .logo{width: 194px;display: inline-block;float:left;height:40px;margin-top: 10px;}
+.footer p{display: inline-block;line-height: 18px;color: #999;margin:0;height: 18px;float: left;margin-left: 30px;}
+.footer p a{color: #999;vertical-align: top;line-height: 18px;}
+
+/*download*/
+.download{width: 1130px;margin: 0 auto;padding: 122px 0 70px;height: 200px;border-bottom: 1px solid #e6e6e6; }
+.download dl{width: 190px;float: left;display: inline-block;margin-right: 45px;}
+.download dl:last-child{margin-right: 0;}
+.download dl.last{margin-right: 0;}
+.download dt a{font-size: 18px;color: #333;}
+.download dt i{width: 62px;height: 62px;background: url(../img/download.png) no-repeat;display: block;}
+.download dd{line-height: 25px;color: #999;}
+.download dt i.android{background-position: 0 0;}
+.download dt i.iphone{background-position: -126px 0;}
+.download dt i.ipad{background-position: -262px 0;}
+.download dt i.window{background-position: -378px 0;}
+.download dt i.mac{background-position: -504px 0;}
+
+/*web-weiyun*/
+.web-weiyun{width: 960px;  margin: 75px auto 140px;}
+.web-weiyun .pic{float: left;width: 422px;height: 224px;margin-left: 70px;}
+.web-weiyun .info{float: left;margin-left: 70px;margin-top: 40px;}
+.web-weiyun .info h3{font-size: 22px;color: #333;margin-bottom: 15px;}
+.web-weiyun .info p{line-height: 20px;color: #999;}
+.web-weiyun .info a{width: 110px;height: 40px;line-height: 40px;display: block;text-align: center;background: #61cd2b;border-radius: 5px;color: #fff;margin-top: 15px;}
+
+
+/*function*/
+.function .center{width: 948px;margin: 0 auto;}
+.function .blueWarp {background: #f5fcff;}
+.function .word{margin-top: 137px;display: inline-block;width:418px ;vertical-align: top;height: 145px;background-image: url(../img/function-jan150521155734.png);float: left;}
+.function .pic{margin-top: 103px;display: inline-block;width: 488px;float: left;}
+.function .pic img{vertical-align: bottom;}
+.function .word p,.function .word h3{font-size: 0;line-height: 0;}
+.backup,.contact,.file,.note{text-align: center;}
+.backup .word{background-position: 0 -150px;}
+.contact .word{background-position: 0 -665px;height: 110px;}
+.file .word{background-position: 0 0;}
+.note .word{background-position: 0 -296px;height: 130px;}
+
+/*vip*/
+.vip{width: 822px;margin: 120px auto 0;padding: 0 192px; border-bottom: 1px solid #e6e6e6;}
+.vip li{float: left;display: inline-block;width: 388px;margin-right: 46px; margin-bottom: 50px;}
+.vip li.even{margin-right: 0;}
+.vip li i{background: url(../img/vip-jan150514093955.png) no-repeat;width: 45px;height: 55px;float: left;margin-right: 15px;}
+.vip li h3{font-size: 22px;margin-bottom: 5px;}
+.vip li div{float: left;line-height: 18px;display: inline-block;width: 315px;}
+.vip li h3{margin-bottom: 10px;line-height: 20px;}
+.vip li p{color: #979797;line-height: 20px;}
+
+/*openVip*/
+.openVip{margin: 70px auto 62px;text-align: center;}
+.openVip .open{width: 213px;height: 46px;line-height: 46px;color: #fff;background: #3091f2;border-radius: 5px;display: block;margin: 0 auto;font-size: 20px;}
+.openVip .attention{margin-top: 20px;color: #666;}
+.openVip .attention a{width: 69px;height: 32px;line-height: 32px;display: inline-block;text-align: center;margin-left: 20px;background: #ececec;color: #666;border-radius: 5px;}
+.openVip .attention a:before{content: '';  background-image: url(../img/vip-jan150514093955.png);
+  background-position: -184px 0;width: 20px;height: 20px;display: inline-block;margin-left: -5px;vertical-align: text-bottom;margin-right: 5px;}
+
+
+

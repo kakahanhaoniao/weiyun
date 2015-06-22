@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>腾讯微云</title>
+<link rel="stylesheet" href="../css/disk.css">
+<link rel="stylesheet" href="../css/common.css">
+<script src='../js/jq.js'></script>
+<script src='../js/filejson.js'></script>
+</head>
+<body>
+<div class="container">
+    <!-- header -->
+    <div class="header fix">
+            <div class="left">
+                <h1></h1>
+                <div class='info'><a href="javascript:;">了解微云黄钻特权</a></div>
+            </div>
+            <div class="right">
+                <ul class='tab'>
+                    <li><a href="javascript:;">微云“净网行动”</a></li>
+                    <li><a href="javascript:;">反馈</a></li>
+                </ul>
+                <!-- 搜索 -->
+                <div class="search">
+                    <i></i>
+                    <input type="text" placeholder='搜索全部文件'/>
+                </div>
+                <!-- 用户 -->
+                <div class="user">
+                    <i class="icon-user"><img src="../img/g.jpg"/></i>
+                    <div class="userInfo">
+                        <ul>
+                            <li class='top'>
+                                <p>づ小、少っ</p>
+                                <p class="text-gray">已使用： 127.29M</p>
+                                <p class="text-gray">总容量： 1024G</p>
+                                <div class="progress"><span class="rank" style='width:20%;'></span></div>
+                            </li>
+                            <li>开通黄钻</li>
+                            <li>独立密码<span class="text-gray">（未开启）</span></li>
+                            <li>https模式<span class="text-gray">（未开启）</span></li>
+                            <li>下载客户端</li>
+                            <li>退出</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="main">
+        <!-- main_nav -->
+        <div class="main_nav">
+            <div class="upload">
+                <div class="upbtn">
+                    <span class='addfile'>+ 添加</span>
+                    <input type="file" multiple='multiple' />
+                    <ul class='addFileList'>
+                        <li><a href="javascript:;">文件</a></li>
+                        <li><a href="javascript:;">文件夹</a></li>
+                        <li><a href="javascript:;">笔记</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- nav_ul -->
+            <ul class="nav_ul">
+                <li class="on"><a href="javascript:;"><i class='icon icon-dir'></i>目录</a></li>
+                <li><a href="javascript:;"><i class='icon icon-recent'></i>最近</a></li>
+                <li class='gap'></li>
+                <li><a href="javascript:;"><i class='icon icon-document'></i>文档</a></li>
+                <li><a href="javascript:;"><i class='icon icon-audio'></i>图片</a></li>
+                <li><a href="javascript:;"><i class='icon icon-music'></i>音乐</a></li>
+                <li><a href="javascript:;"><i class='icon icon-video'></i>视频</a></li>
+                <li><a href="javascript:;"><i class='icon icon-note'></i>笔记</a></li>
+                <li class='gap'></li>
+                <li><a href="javascript:;"><i class='icon icon-copy'></i>剪贴板</a></li>
+                <li class='gap'></li>
+                <li><a href="javascript:;"><i class='icon icon-share'></i>分享链接</a></li>
+                <li><a href="javascript:;"><i class='icon icon-dity'></i>回收站</a></li>
+            </ul>
+        </div>
+
+        <!-- main_con -->
+        <div class="main_con">
+            <!-- option -->
+            <div class="opt">
+                <div class="optLeft">
+                    <a class='down'><i class='icon icon-down'></i>下载</a>
+                    <a class='share'><i class='icon icon-share'></i>分享</a>
+                    <a class='move'><i class='icon icon-move'></i>移动到</a>
+                    <a class='rename'><i class='icon icon-rename'></i>重命名</a>
+                    <a class='del'><i class='icon icon-del'></i>删除</a>
+                    <a class='makedir'><i class='icon icon-newdir'></i>新建文件夹</a>
+                    <a class='refresh'><i class='icon icon-refresh'></i></a>
+                </div>
+                <div class="optRight">
+                    <a id='twocollum'><i class='icon icon-twocollum'></i></a>
+                    <span>
+                        <i class='icon icon-sort'></i>
+                    </span>
+                </div>
+            </div>
+            <!-- show content -->
+            <div class="showfile">
+                <!-- 目录树 -->
+                <div class="fileTree">
+                    <div class="treebox">
+                        <dl id='newDictory'>
+                            <dt class='haschild' data-id='0'><i class='show'></i>微云</dt>
+                        </dl>
+                    </div> 
+                </div>
+                <!-- 文件列表 -->
+                <div class="fileCon">
+                    <!-- 路径 -->
+                    <div class="title">
+                        <span class='allchk'></span>
+                        <div class="mainPath" id='mainPath'>
+                            <a class='topPath isNow' data-id='0'>微云</a>
+                        </div>
+                    </div>
+                    <!-- folder content -->
+                    <div class="foldercon">
+                        <ul id='folderList' class='fix'>
+                            
+                        </ul>
+                    </div>
+                </div>                   
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 文件操作方法 -->
+<script src='../js/fileopt.js'></script>
+
+<!-- tips组件 -->
+<script src='../js/tips.js'></script>
+<!-- dialog组件 -->
+<script src='../js/dialog.js'></script>
+
+<script src='../js/diskmain.js'></script>
+</body>
+</html>

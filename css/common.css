@@ -1,0 +1,244 @@
+@charset "UTF-8";
+*{margin:0;padding:0;font:12px/30px '微软雅黑';}
+ul{list-style: none;}
+a{text-decoration: none;outline: none;cursor: pointer;}
+/*common*/
+html{height: 100%;overflow: hidden;}
+body{height: 100%;overflow: auto;}
+.container{min-height: 100%;position: relative;}
+.fix:after{content: '';display: table;clear: both;}
+.fix{*zoom: 1;}
+.text-gray{color: #7d838f}
+.icon{background: url(../img/ico-message.png) no-repeat;}
+
+
+/*filetype*/
+.file{background: url(../img/file.png) no-repeat;}
+.filetype-folder{background-position:0px 2px}
+.filetype-doc{background-position:1px -114px}
+.filetype-docx{background-position:-114px -114px}
+.filetype-vsd{background-position:-228px -114px}
+.filetype-wps{background-position:-342px -114px}
+.filetype-ppt{background-position:-456px -114px}
+.filetype-pptx{background-position:-570px -114px}
+.filetype-dps{background-position:-684px -114px}
+.filetype-msg{background-position:-798px -114px}
+.filetype-xls{background-position:-912px -114px}
+.filetype-xlsx{background-position:-1026px -114px}
+.filetype-et{background-position:-1140px -114px}
+.filetype-pdf{background-position:1px -228px}
+.filetype-txt{background-position:-114px -228px}
+.filetype-key{background-position:-228px -228px}
+.filetype-rp{background-position:-342px -228px}
+.fil.filetype-numbers{background-position:-456px -228px}
+.f.filetype-pages{background-position:-570px -228px}
+.fil.filetype-keynote{background-position:-684px -228px}
+.filetype-jpg{background-position:1px -342px}
+.filetype-jpeg{background-position:-114px -342px}
+.filetype-png{background-position:-228px -342px}
+.filetype-gif{background-position:-342px -342px}
+.filetype-bmp{background-position:-456px -342px}
+.filetype-psd{background-position:-570px -342px}
+.filetype-ai{background-position:-684px -342px}
+.filetype-eps{background-position:-798px -342px}
+.filetype-avi{background-position:1px -456px}
+.filetype-asf{background-position:-114px -456px}
+.filetype-mp4{background-position:-228px -456px}
+.filetype-mkv{background-position:-342px -456px}
+.filetype-mov{background-position:-456px -456px}
+.filetype-mod{background-position:-570px -456px}
+.filetype-mpe{background-position:-684px -456px}
+.filetype-3gp{background-position:-798px -456px}
+.filetype-rmvb{background-position:-912px -456px}
+.filetype-wmv{background-position:-1026px -456px}
+.filetype-wmf{background-position:-1140px -456px}
+.filetype-mpg{background-position:-1254px -456px}
+.filetype-mpeg{background-position:-1368px -456px}
+.filetype-rm{background-position:1px -570px}
+.filetype-dat{background-position:-114px -570px}
+.filetype-f4a{background-position:-228px -570px}
+.filetype-webm{background-position:-342px -570px}
+.filetype-swf{background-position:-456px -570px}
+.filetype-flv{background-position:-570px -570px}
+.filetype-fla{background-position:-684px -570px}
+.filetype-mp3{background-position:1px -684px}
+.filetype-wma{background-position:-114px -684px}
+.filetype-wav{background-position:-228px -684px}
+.filetype-ogg{background-position:-342px -684px}
+.filetype-acc{background-position:-456px -684px}
+
+/*no file*/
+.empty-box{width: 500px;height: 120px;margin: 50px auto 0;}
+.empty-box .ico-empty{background: url(../img/g-empty.png) no-repeat center 0;height: 90px;}
+.empty-box p{font-size: 16px;line-height: 30px;color: #AFB5BF}
+.empty-box p.top{font-size: 22px;line-height:40px;}
+
+
+.fileSmall-folder{background-position:1px 2px}/*文件夹*/
+.fileSmall-mail{background-position:-81px 2px;}/*qq邮箱*/
+.fileSmall-offline{background-position:-163px 2px;}/*离线文件*/
+.fileSmall-weixin-dir{background-position:-245px 2px;}/*微信*/
+.fileSmall-xfdownload{background-position:-327px 2px;}/*旋风下载*/
+.fileSmall-weixin-news{background-position:-409px 2px;}/*腾讯新闻*/
+.fileSmall-weixin-msgs{background: url(/vipstyle/nr/box/web/images/wx-web-spr.png?t=130723) -40px -160px no-repeat;}/*微信文字语音*/
+.fileSmall-weixin-img{background: url(/vipstyle/nr/box/web/images/wx-web-spr.png?t=130723) 0 -240px no-repeat;}/*微信视频图片*/
+.fileSmall-weixin-blog{background: url(/vipstyle/nr/box/web/images/wx-web-spr.png?t=130723) 0 -200px no-repeat;}/*微信文章*/
+.fileSmall-doc{background-position:1px -80px}
+.fileSmall-docx{background-position:-81px -80px}/*20131217 new*/
+.fileSmall-vsd{background-position:-163px -80px}
+.fileSmall-wps{background-position:-245px -80px}/*20131217 new*/
+.fileSmall-ppt{background-position:-327px -80px}
+.fileSmall-pptx{background-position:-409px -80px}/*20131217 new*/
+.fileSmall-dps{background-position:-491px -80px}/*20131217 new*/
+.fileSmall-msg{background-position:-573px -80px}
+.fileSmall-xls{background-position:-655px -80px}
+.fileSmall-xlsx{background-position:-737px -80px}/*20131217 new*/
+.fileSmall-et{background-position:-819px -80px}/*20131217 new*/
+.fileSmall-pdf{background-position:1px -162px}
+.fileSmall-txt{background-position:-81px -162px}
+.fileSmall-key{background-position:-163px -162px}/*20131217 new*/
+.fileSmall-rp{background-position:-245px -162px}
+.fileSmall-numbers{background-position:-327px -162px}/*20131217 new*/
+.fileSmall-pages{background-position:-409px -162px}/*20131217 new*/
+.fileSmall-keynote{background-position:-491px -162px}/*20131217 new*/
+.fileSmall-jpg{background-position:1px -244px}
+.fileSmall-jpeg{background-position:-81px -244px}
+.fileSmall-png{background-position:-163px -244px}
+.fileSmall-gif{background-position:-245px -244px}
+.fileSmall-bmp{background-position:-327px -244px}
+.fileSmall-psd{background-position:-409px -244px}
+.fileSmall-ai{background-position:-491px -244px}
+.fileSmall-eps{background-position:-573px -244px}
+.fileSmall-avi{background-position:1px -326px}
+.fileSmall-asf{background-position:-81px -326px}
+.fileSmall-mp4{background-position:-163px -326px}
+.fileSmall-mkv{background-position:-245px -326px}/*20131217 new*/
+.fileSmall-mov{background-position:-327px -326px}
+.fileSmall-mod{background-position:-409px -326px}
+.fileSmall-mpe{background-position:-491px -326px}
+.fileSmall-3gp{background-position:-573px -326px}
+.fileSmall-rmvb{background-position:-655px -326px}
+.fileSmall-wmv{background-position:-737px -326px}
+.fileSmall-wmf{background-position:-819px -326px}
+.fileSmall-mpg{background-position:-903px -326px}/*20131217 new*/
+.fileSmall-mpeg{background-position:-985px -326px}/*20131217 new*/
+.fileSmall-rm{background-position:1px -408px}
+.fileSmall-dat{background-position:-81px -408px}/*20131217 new*/
+.fileSmall-f4a{background-position:-163px -408px}/*20131217 new*/
+.fileSmall-webm{background-position:-245px -408px}/*20131217 new*/
+.fileSmall-swf{background-position:-327px -408px}
+.fileSmall-flv{background-position:-409px -408px}
+.fileSmall-fla{background-position:-491px -408px}
+.fileSmall-mp3{background-position:1px -490px}
+.fileSmall-wma{background-position:-81px -490px}
+.fileSmall-wav{background-position:-163px -490px}
+.fileSmall-ogg{background-position:-245px -490px}/*20131217 new*/
+.fileSmall-acc{background-position:-327px -490px}/*20131217 new*/
+.fileSmall-m4a{background-position:-409px -490px}/*20131217 new*/
+.fileSmall-wave{background-position:-491px -490px}/*20131217 new*/
+.fileSmall-midi{background-position:-573px -490px}/*20131217 new*/
+.fileSmall-ape{background-position:-655px -490px}/*20131217 new*/
+.fileSmall-aac{background-position:-737px -490px}/*20131217 new*/
+.fileSmall-aiff{background-position:-819px -490px}/*20131217 new*/
+.fileSmall-mid{background-position:-903px -490px}/*20131217 new*/
+.fileSmall-xmf{background-position:-985px -490px}/*20131217 new*/
+.fileSmall-rtttl{background-position:-1067px -490px}/*20131217 new*/
+.fileSmall-flac{background-position:1px -572px}/*20131217 new*/
+.fileSmall-amr{background-position:-81px -572px}/*20131217 new*/
+.fileSmall-ipa{background-position:1px -654px}
+.fileSmall-apk{background-position:-81px -654px}
+.fileSmall-exe{background-position:-163px -654px}
+.fileSmall-msi{background-position:-245px -654px}
+.fileSmall-bat{background-position:-327px -654px}
+.fileSmall-log{background-position:-409px -654px}
+.fileSmall-xmin{background-position:-491px -654px}
+.fileSmall-htm{background-position:-573px -654px}
+.fileSmall-html{background-position:-655px -654px}
+.fileSmall-c{background-position:-737px -654px}
+.fileSmall-xml{background-position:-819px -654px}
+.fileSmall-link{background-position:-903px -654px}
+.fileSmall-asp{background-position:1px -736px}
+.fileSmall-chm{background-position:-81px -736px}
+.fileSmall-hlp{background-position:-163px -736px}
+.fileSmall-ttf{background-position:-245px -736px}
+.fileSmall-ttc{background-position:-327px -736px}/*20131217 new*/
+.fileSmall-otf{background-position:-409px -736px}
+.fileSmall-fon{background-position:-491px -736px}/*20131217 new*/
+.fileSmall-bak{background-position:-573px -736px}
+.fileSmall-tmp{background-position:-655px -736px}
+.fileSmall-old{background-position:-737px -736px}
+.fileSmall-zip{background-position:1px -818px}
+.fileSmall-7z{background-position:-81px -818px}
+.fileSmall-rar{background-position:-163px -818px}
+.fileSmall-iso{background-position:-245px -818px}
+.fileSmall-ace{background-position:-327px -818px}
+.fileSmall-cab{background-position:-409px -818px}
+.fileSmall-uue{background-position:-491px -818px}
+.fileSmall-jar{background-position:-573px -818px}
+.fileSmall-tar{background-position:-655px -818px}
+.fileSmall-dmg{background-position:-737px -818px}/*20131217 new*/
+.fileSmall-document,
+.fileSmall-exec,
+.fileSmall-code,
+.fileSmall-image,
+.fileSmall-video,
+.fileSmall-compress,
+.fileSmall-unknow,.fileSmall-file{background-position:-163px -900px}
+.fileSmall-filebroken{background-position:-245px -900px}
+
+
+
+/* appbox webkit滚动条 */
+::-webkit-scrollbar-track{
+    /*border-radius:4px;*/
+}
+::-webkit-scrollbar-track-piece{
+    /*-webkit-border-radius:4px;*/
+}
+::-webkit-scrollbar-track-piece:hover{
+
+}
+::-webkit-scrollbar{
+    width:8px;
+    height:10px;
+    border-radius:0px;
+    background-color:#f5f6f9;
+    border:solid 1px #eff1f5;
+}
+::-webkit-scrollbar:hover{
+    background:#DCE1E4;
+}
+::-webkit-scrollbar-thumb{
+    background-color:#d8dce5;
+    /*border:solid 1px #d8dce5;
+    border-radius:4px;*/
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color:#9198a6;
+    border-color:#9198a6;
+}
+::-webkit-scrollbar-arrow {
+    color:#F00;
+    background:#0F0;
+}
+::-webkit-scrollbar-button{
+    display:block;
+    width:8px;
+    height:10px;
+    /*border-radius:4px;*/
+    border:1px solid #B5BBBF;
+    display:none;
+}
+::-webkit-scrollbar-button:hover{
+    border-color:#5F6366;
+}
+::-webkit-scrollbar-button:vertical:start:increment,
+::-webkit-scrollbar-button:vertical:end:decrement {
+    display:none;
+}
+
+
+
+
+
+
