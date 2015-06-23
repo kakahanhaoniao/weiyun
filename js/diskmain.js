@@ -59,6 +59,26 @@ $(document).on('contextmenu',function(ev){
     
 }).on('mousedown',documentDraw)
 
+
+// 全选file
+
+$('.allchk').on('click',function(ev) {
+    ev=ev||window.event;
+    var oBox=$('#folderList');
+    if(!$(this).hasClass('checked')){
+        oBox.find('li').addClass('checked');
+        oBox.find('.check').addClass('checked');
+        $(this).addClass('checked');
+    }else{
+        oBox.find('.checked').removeClass('checked');
+        $(this).removeClass('checked');
+    }
+    ev.stopPropagation?ev.stopPropagation():ev.cancelBubble=true;
+    ev.preventDefault();
+    return false;
+})
+
+
 // 操作按钮组的事件组
 optClick('.optLeft');
 

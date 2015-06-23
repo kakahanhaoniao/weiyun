@@ -259,6 +259,7 @@ function contextMenu(ev){
                 document.body.appendChild(contextMenudialog);
                 contextMenudialog.style.left=dialogX+'px';
                 contextMenudialog.style.top=dialogY+'px';
+                optClick(contextMenudialog);
             }
         })    
     ev.stopPropagation?ev.stopPropagation():ev.cancelBubble=true;
@@ -453,7 +454,7 @@ function optClick(box){
     aA=oBox.find('a');
     for(var i=0;i<aA.length;i++){
         aA.eq(i).on('click',function(ev){
-            ev=ev||event;
+            ev=ev||window.event;
             if(this.className=='rename'){       
                 // 重命名         
                 rename();                    
@@ -473,6 +474,15 @@ function optClick(box){
                 // 移动到
                 moveFile();
             }
+            // 判断是页面按钮还是弹框
+            if(!oBox.hasClass('optLeft')){
+                document.body.removeChild(box);
+            }
+            ev.stopPropagation?ev.stopPropagation():ev.cancelBubble=true;
+            ev.preventDefault();
+            return false;
+        }).on('mousedown',function (ev) {
+            ev=ev||window.event;
             ev.stopPropagation?ev.stopPropagation():ev.cancelBubble=true;
             ev.preventDefault();
             return false;
@@ -670,6 +680,7 @@ function moveFile() {
                 sureFn:function() {
                     
                     var pId=$('#moveFile').find('.showPath').attr('data-id');
+                    if(!pId) return;
                     for(var i=0;i<aId.length;i++){
                         file[aId[i]].parentId=pId;
                     }
