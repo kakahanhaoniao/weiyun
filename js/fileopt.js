@@ -371,18 +371,18 @@ function rename(){
     input.attr('type','text');
     // 取消拖拽事件
     $(document).off('mousedown');
+    input[0].oldvalue=oldVal;
     // 鼠标输入(确定输入)
     input.on('keydown',function(ev){
         ev=ev||window.event;
         var id=$.trim($(this).attr('data-name-id'));
         var keycode=ev.keyCode;
         var value=$.trim(this.value);
-        if(!value) return;
-        this.oldvalue=value;
+        if(!value) return;        
         if(keycode==13){
+            syncName(id,value,this.oldvalue==value);
             oFilename.html(value);
             file[id].name=value;
-            syncName(id,value);
         }
     }).on('click',function(ev){
         ev=ev||window.event;
@@ -404,8 +404,8 @@ function sureRename(){
     if(id){
         value=value?value:aNeedsure[0].oldvalue;
         file[id].name=value;
+        syncName(id,value,aNeedsure[0].oldvalue==value);
         aNeedsure.parent().html(value);
-        syncName(id,value);
     }else{
         var pLi=aNeedsure.parent().parent().parent();
         // 有值就新建文件夹 没有就删除
@@ -421,8 +421,10 @@ function sureRename(){
     $(document).on('mousedown',documentDraw);
 }
 
-// 重命名文件夹同步名称
-function syncName(id,value){
+/*重命名文件夹同步名称
+ *isOldVal 判断value有没有变化
+*/
+function syncName(id,value,isOldVal){
     var aObj=$('[data-id='+id+']');
     for(var i=0;i<aObj.length;i++){
         if(aObj[i].nodeName.toLowerCase()=='dt'){
@@ -431,7 +433,7 @@ function syncName(id,value){
             aObj.eq(i).html(value);
         }
     }
-    new Tips({showText:'更名成功',type:'success'});
+    isOldVal?null:new Tips({showText:'更名成功',type:'success'});
 }
 
 // 获取选中文件，返回所有选中的id
@@ -476,7 +478,7 @@ function optClick(box){
             }
             // 判断是页面按钮还是弹框
             if(!oBox.hasClass('optLeft')){
-                document.body.removeChild(box);
+                oBox.css('display','none');
             }
             ev.stopPropagation?ev.stopPropagation():ev.cancelBubble=true;
             ev.preventDefault();
